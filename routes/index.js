@@ -66,10 +66,21 @@ router.get('/remove/:id', function(req, res, next) {
 });
 
 //MARK: Payment Route
-router.get('/pay', function(req, res, next) {
+router.post('/pay', function(req, res, next) {
   
+  var cart = new Cart(req.session.cart ? req.session.cart : {});
+
   //MARK: Remove all empty space when make json
-  var data = JSON.stringify({"amount":10000000,"app_id":appId,"reference":"5888995555546656925","customer_first_name":"chamath","customer_last_name":"rathnayake","customer_phone_number":"+94778869070","customer_email":"chamathrathnayake95@gmail.com","transaction_redirect_url":transactionRedirectUrl})
+  var data = JSON.stringify({
+                      "amount":cart.totalPrice,  //only alow LKR amouts
+                      "app_id":appId,
+                      "reference":"5888995555546656925", //enter uniq number
+                      "customer_first_name":req.body.fname,
+                      "customer_last_name":req.body.lname,
+                      "customer_phone_number": req.body.phonenumber, //please enter number with +94
+                      "customer_email":req.body.email,
+                      "transaction_redirect_url":transactionRedirectUrl  
+                    })
   
   var hash = crypto.createHash('sha256');
   hash_obj = data + salt //MARK: append slat to the json when make hash obj

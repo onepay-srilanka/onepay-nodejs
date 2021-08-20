@@ -31,3 +31,10 @@ a {
 .cart.page {
   padding: 25px 0;
 }
+
+.textbox {
+	border: 1px dotted #000000;
+	outline:0;
+	height:25px;
+	width: 275px;
+}
