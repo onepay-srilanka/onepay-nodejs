@@ -18,9 +18,4 @@ Start NodeJS server at http://localhost:3000
 npm start
 ```
 
-For Nodemon usage
-``` shell
-nodemon ./bin/www
-```
-
 For any extra questions, please contact me at inf@onepay.lk. 
