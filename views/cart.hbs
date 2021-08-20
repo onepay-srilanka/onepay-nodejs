@@ -24,15 +24,29 @@
 
     <hr>
     <div>
-        <form >
-            <input type="text" name="name" placeholder="Name">
+        <form action="/pay" method="POST">
 
-            <div>
+            <p> 
+                <input type="text" name="fname" placeholder="First Name" class="textbox" required>
+            </p>
+
+            <p> 
+                <input type="text" name="lname" placeholder="Last Name" class="textbox" required>
+            </p>
+
+            <p> 
+               <input type="tel" name="phonenumber" placeholder="Phone Number" class="textbox" pattern="^(?:7|0|(?:\+94))[0-9]{9,10}$" required>
+            </p>
+
+            <p> 
+                <input type="email" name="email" placeholder="email" class="textbox" required>
+            </p>
+
+            <p>
                 <strong>Total: LKR {{ totalPrice }}</strong>
-            </div>
-            <a href="/pay" >
-                <input class="btn btn-success" type="button" name="pay">
-            </a>
+            </p>
+
+            <button type="submit" class="btn btn-success"> PAY VIA ONEPAY </a>
         </form>
     </div>
  
