@@ -10,12 +10,12 @@ var products = JSON.parse(fs.readFileSync('./data/products.json', 'utf8'));
 //MARK: onepay payment gateway values 
 
 //MARK: payment base url
-var paymentUrl = 'https://merchant-api-development.onepay.lk/api/ipg/gateway/request-transaction/?hash=' 
+var paymentUrl = 'https://merchant-api-live-v2.onepay.lk/api/ipg/gateway/request-transaction/?hash=' 
 
 //MARK: Please access onepay merchant admin panel to get this values 
-var appId      = 'SA571187AEE1C0D48C9A0'
-var appToken   = 'c61e77584884b069cce64e3fb6c3ca5d524b1b2042a735bef225e129741a45928302c76d934a2170.G7WJ1187AEE1C0D48C9F7'
-var salt       = '58211187AEE1C0D48C9CE'
+var appId      = 'YANL1187B3E355A17C992'
+var appToken   = 'ba8495f5e8ef9b4ce2ef7b62aa58460339223248bab4db23adc5cda62a81265d261d49353def25fc.BEGF1187B3E355A17C9E8'
+var salt       = 'P5481187B3E355A17C9C4'
 var transactionRedirectUrl = 'http://localhost:3000/response'
 
 //MARK: Index Route
